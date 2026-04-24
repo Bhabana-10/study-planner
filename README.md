@@ -36,6 +36,6 @@ src/main/resources/static → Frontend (HTML, CSS, JS)
 2. Open the project in VS Code  
 3. Run the backend:
    ```bash
-   mvnw spring-boot:run
+   .\mvnw spring-boot:run
 4. Open in browser :- http://localhost:8080   
    
