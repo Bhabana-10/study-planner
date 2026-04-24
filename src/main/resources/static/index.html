@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Smart Study Planner</h1>
+      <p>Plan your subjects, track deadlines, and manage study progress.</p>
+    </header>
+
+    <main class="main-layout">
+      <section class="card form-card">
+        <h2>Add Subject</h2>
+
+        <form id="subjectForm">
+          <label>Subject Name</label>
+          <input type="text" id="subjectName" placeholder="Example: Operating Systems" required />
+
+          <label>Deadline</label>
+          <input type="date" id="deadline" required />
+
+          <label>Difficulty</label>
+          <select id="difficulty" required>
+            <option value="">Select Difficulty</option>
+            <option value="Easy">Easy</option>
+            <option value="Medium">Medium</option>
+            <option value="Hard">Hard</option>
+          </select>
+
+          <label>Daily Study Hours Available</label>
+          <input type="number" id="dailyHours" placeholder="Example: 4" required />
+
+          <button type="submit">Add Subject</button>
+        </form>
+      </section>
+
+      <section class="card stats-card">
+        <h2>Dashboard</h2>
+        <div class="stats">
+          <div>
+            <h3 id="totalSubjects">0</h3>
+            <p>Total Subjects</p>
+          </div>
+          <div>
+            <h3 id="pendingSubjects">0</h3>
+            <p>Pending</p>
+          </div>
+          <div>
+            <h3 id="completedSubjects">0</h3>
+            <p>Completed</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section class="card table-card">
+      <h2>Subjects List</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Subject</th>
+            <th>Deadline</th>
+            <th>Difficulty</th>
+            <th>Daily Hours</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="subjectTableBody"></tbody>
+      </table>
+    </section>
+
+    <section class="card schedule-card">
+      <div class="schedule-header">
+        <h2>Generated Study Schedule</h2>
+        <button id="generateScheduleBtn" type="button">Generate Schedule</button>
+      </div>
+
+      <div id="scheduleOutput" class="schedule-output">
+        No schedule generated yet.
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
